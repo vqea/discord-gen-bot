@@ -66,7 +66,7 @@ async def stock(ctx):
   nitro = len(open('stock/nitro.txt').readlines())
   cc = len(open('stock/cc.txt').readlines())
   embed = discord.Embed()
-  embed.set_author(name = f"{ctx.guild.name} <3", icon_url = eysxia.user.avatar.url)
+  embed.set_author(name = f"{ctx.guild.name} <3", icon_url = genbot.user.avatar.url)
   embed.set_thumbnail(
     url = eysxia.user.avatar.url)
   embed.add_field(name="tiktok", value=f"```{str(tiktok)}```", inline=False)
@@ -98,7 +98,7 @@ async def gen(ctx, acc: str = None):
           check_dm_embed = discord.Embed(description=f">>> {ctx.author.mention} `account has been sent to dms!`")
           account_dm_embed = discord.Embed()
           account_dm_embed.add_field(name=f"account: {acc}", value=f"```{str(account)}```", inline=False)
-          account_dm_embed.set_footer(icon_url=eysxia.user.avatar.url, text=f'sent from {ctx.guild.name} <3 | deleting in 5 minutes')
+          account_dm_embed.set_footer(icon_url=genbot.user.avatar.url, text=f'sent from {ctx.guild.name} <3 | deleting in 5 minutes')
           await ctx.author.send(embed=account_dm_embed, delete_after=300)
           await ctx.author.send(f"your copy+paste:\n`{str(account)}`", delete_after=300)
           msg = await ctx.reply(embed=check_dm_embed, mention_author=False)
@@ -121,7 +121,7 @@ async def gen(ctx, acc: str = None):
           check_dm_embed = discord.Embed(description=f">>> {ctx.author.mention} `account has been sent to dms!`", )
           account_dm_embed = discord.Embed()
           account_dm_embed.add_field(name=f"account: {acc}", value=f"```{str(account)}```", inline=False)
-          account_dm_embed.set_footer(icon_url=eysxia.user.avatar.url, text=f'sent from {ctx.guild.name} <3 | deleting in 5 minutes')
+          account_dm_embed.set_footer(icon_url=genbot.user.avatar.url, text=f'sent from {ctx.guild.name} <3 | deleting in 5 minutes')
           await ctx.author.send(embed=account_dm_embed, delete_after=300)
           await ctx.author.send(f"your copy+paste:\n`{str(account)}`", delete_after=300)
           msg = await ctx.reply(embed=check_dm_embed, mention_author=False)
@@ -171,4 +171,4 @@ async def gen(ctx, acc: str = None):
 
 
 keep_alive.keep_alive()
-eysxia.run(token)
+genbot.run(token)
