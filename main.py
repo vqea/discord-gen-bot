@@ -17,7 +17,7 @@ genbot.remove_command('help')
 
 @genbot.event
 async def on_ready():
-  await eysxia.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.competing, name="github/vqea"))
+  await genbot.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.competing, name="github/vqea"))
   print(f"connected to {genbot.user}")
 
 
